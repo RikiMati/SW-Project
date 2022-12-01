@@ -180,6 +180,7 @@ public class Login extends javax.swing.JFrame {
                 String forPswd = raf.readLine().substring(9);
                 if(usr.equals(forUser) & pswd.equals(forPswd)){
                     JOptionPane.showMessageDialog(null, "password matched");
+                    new Login().setVisible(true);
                     break;
                 }else if(i==(ln-3)){
                     JOptionPane.showMessageDialog(null, "incorrect username/password");
