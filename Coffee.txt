@@ -1,0 +1,16 @@
+ID , NAME 		, COST	, AMOUNT
+1  ; Espresso 		; 1.00  ; 100
+2  ; Capuccino		; 1.8	; 100
+3  ; Caffe Latte	; 2.0	; 100
+4  ; Caffe Mocha 	; 2.5	; 100
+5  ; Caffe Miel		; 3.0	; 100
+6  ; Turtle		; 3.0	; 100
+7  ; Caffe Breve	; 3.5	; 100
+8  ; Jump Start		; 3.5	; 100
+9  ; Americano		; 2.5	; 100
+10 ; Coffee of the day	; 4.0	; 100
+11 ; Cafe au Lait	; 3.5	; 100
+12 ; Frappe		; 1.5	; 100
+13 ; Freddo Espresso	; 2.0	; 100
+14 ; Freddo Capuccino	; 2.5	; 100
+15 ; French Vanilla	; 2.0	; 100

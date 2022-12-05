@@ -1,0 +1,16 @@
+ID , NAME 		 , COST	, AMOUNT
+1  ; English Breakfast 	 ; 8.00 ; 100
+2  ; Scrambled Eggs	 ; 7.5	; 100
+3  ; Omelette		 ; 5.0	; 100
+4  ; Pancakes with Choc  ; 5.5	; 100
+5  ; Pancakes Red Velvet ; 6.0	; 100
+6  ; Pancakes Peanut Butt; 6.0	; 100
+7  ; Croque Madame	 ; 7.5	; 100
+8  ; Croque Monsieur	 ; 7.0	; 100
+9  ; Homemade Cheesepie  ; 8.0	; 100
+10 ; BLT Club Sandwich	 ; 8.0	; 100
+11 ; Chicken Club Sand	 ; 8.5	; 100
+12 ; Mini Cheeseburger	 ; 13.0	; 100
+13 ; Toast		 ; 4.20	; 100
+14 ; Open Chicken Sandw. ; 7.20	; 100
+15 ; Fruit Salat	 ; 7.60	; 100

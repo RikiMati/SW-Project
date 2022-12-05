@@ -1,0 +1,12 @@
+ID , NAME 		, COST	, AMOUNT
+1  ; Fresh Orange Juice ; 4.90  ; 100
+2  ; Fresh Banana Juice ; 4.90	; 100
+3  ; Fresh Apple Juice  ; 4.90	; 100
+4  ; Fresh Peach Juice  ; 4.90	; 100
+5  ; Smoothies Exotic Fr; 6.90	; 100
+6  ; Coca Cola		; 3.90	; 100
+7  ; Sprite		; 3.90	; 100
+8  ; Fanta		; 3.90	; 100
+9  ; Schweppes		; 3.90	; 100
+10 ; Milkshake Red Fr.	; 7.20	; 100
+11 ; Milkshake Tropic Fr; 7.20	; 100
