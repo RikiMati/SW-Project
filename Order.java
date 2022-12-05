@@ -20,7 +20,6 @@ public class Order extends javax.swing.JFrame {
         finaltable = new javax.swing.JTable();
         add = new javax.swing.JButton();
         delete = new javax.swing.JButton();
-        upload = new javax.swing.JButton();
         coffeebutton = new javax.swing.JButton();
         snackbutton = new javax.swing.JButton();
         drinksbutton = new javax.swing.JButton();
@@ -69,10 +68,6 @@ public class Order extends javax.swing.JFrame {
             }
         });
 
-        upload.setBackground(new java.awt.Color(102, 102, 102));
-        upload.setForeground(new java.awt.Color(255, 255, 255));
-        upload.setText("UPLOAD");
-
         coffeebutton.setText("COFFEE");
         coffeebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,70 +89,77 @@ public class Order extends javax.swing.JFrame {
             }
         });
 
-        receipt.setBackground(new java.awt.Color(204, 204, 204));
+        receipt.setBackground(new java.awt.Color(102, 102, 102));
+        receipt.setForeground(new java.awt.Color(255, 255, 255));
         receipt.setText("RECEIPT");
+        receipt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                receiptActionPerformed(evt);
+            }
+        });
 
         close.setBackground(new java.awt.Color(204, 204, 204));
         close.setText("CLOSE");
+        close.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                closeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(receipt)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(close))
+                                .addComponent(coffeebutton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(snackbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(coffeebutton)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(snackbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(add)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(upload)
-                                    .addComponent(drinksbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(drinksbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
+                            .addComponent(receipt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(close, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 891, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(coffeebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(snackbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drinksbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(receipt, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(close, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(coffeebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(snackbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(drinksbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(upload, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(receipt, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                    .addComponent(close, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -174,6 +176,7 @@ public class Order extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //imports the coffee txt file in the table
     private void coffeebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coffeebuttonActionPerformed
         orderTable.setModel(new DefaultTableModel(null ,new String[]{"ID", "NAME", "COST", "AMOUNT"}));
         String filePath = "coffee.txt";
@@ -187,7 +190,7 @@ public class Order extends javax.swing.JFrame {
             Object[] tableLines = br.lines().toArray();
            for (Object tableLine : tableLines) {
                String line = tableLine.toString().trim();
-               String[] dataRow = line.split("/");
+               String[] dataRow = line.split(";");
                model.addRow(dataRow);
            }
         }catch(IOException e){
@@ -195,6 +198,7 @@ public class Order extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_coffeebuttonActionPerformed
 
+    //imports the snack txt file in the table
     private void snackbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snackbuttonActionPerformed
         orderTable.setModel(new DefaultTableModel(null ,new String[]{"ID", "NAME", "COST", "AMOUNT"}));
         String filePath = "Breakfast.txt";
@@ -209,7 +213,7 @@ public class Order extends javax.swing.JFrame {
             Object[] tableLines = br.lines().toArray();
            for (Object tableLine : tableLines) {
                String line = tableLine.toString().trim();
-               String[] dataRow = line.split("/");
+               String[] dataRow = line.split(";");
                model.addRow(dataRow);
            }
         }catch(IOException e){
@@ -217,6 +221,7 @@ public class Order extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_snackbuttonActionPerformed
 
+    //imports the drink txt file in the table
     private void drinksbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drinksbuttonActionPerformed
         orderTable.setModel(new DefaultTableModel(null ,new String[]{"ID", "NAME", "COST", "AMOUNT"}));    
         String filePath = "Drinks.txt";
@@ -230,7 +235,7 @@ public class Order extends javax.swing.JFrame {
             Object[] tableLines = br.lines().toArray();
            for (Object tableLine : tableLines) {
                String line = tableLine.toString().trim();
-               String[] dataRow = line.split("/");
+               String[] dataRow = line.split(";");
                model.addRow(dataRow);
            }
         }catch(IOException e){
@@ -238,6 +243,7 @@ public class Order extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_drinksbuttonActionPerformed
 
+    //passes a data from one table to the other
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         TableModel model1 = orderTable.getModel();
         int[] index = orderTable.getSelectedRows();
@@ -252,9 +258,9 @@ public class Order extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_addActionPerformed
 
+    //deletes a row only from the second table
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         DefaultTableModel firstModel = (DefaultTableModel)finaltable.getModel();
-        
         if(finaltable.getSelectedRowCount() == 1){
             firstModel.removeRow(finaltable.getSelectedRow());
         }else{
@@ -265,6 +271,33 @@ public class Order extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_deleteActionPerformed
+
+    //close the recent page and goes back to the login page
+    private void closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeActionPerformed
+        new Order().dispose();
+        new Login().setVisible(true);
+    }//GEN-LAST:event_closeActionPerformed
+
+    //exports the data of the second table to the receipt text file
+    private void receiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receiptActionPerformed
+        String filePath = "receipt.txt";
+        File file = new File (filePath);
+        try{
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            for(int i=0; i <finaltable.getRowCount(); i++){
+                for(int j=0; j <finaltable.getColumnCount(); j++){
+                bw.write(finaltable.getValueAt(i, j).toString() + " ; ");
+            }
+            bw.newLine();
+        }
+        bw.close();
+        fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Order.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        new Receipt().setVisible(true);
+    }//GEN-LAST:event_receiptActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -288,10 +321,7 @@ public class Order extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Order.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
-       
+        //</editor-fold>       
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -307,6 +337,5 @@ public class Order extends javax.swing.JFrame {
     private javax.swing.JTable orderTable;
     private javax.swing.JButton receipt;
     private javax.swing.JButton snackbutton;
-    private javax.swing.JButton upload;
     // End of variables declaration//GEN-END:variables
 }
